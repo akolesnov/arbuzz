@@ -1,0 +1,553 @@
+@import "scss/settings";
+
+body {
+	padding-top: 48px;
+}
+.container {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 15px;
+}
+.header{
+	background: #FAFAFA;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	border-bottom: 1px solid #DFDFDF;
+	z-index: 50;
+	&__line {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 48px;
+	}
+	&__logo {
+		height: 16px;
+		display: block;
+		img {
+			height: 100%;
+		}
+		img:last-child {
+			display: none;
+		}
+	}
+}
+
+.socials {
+	width: 98px;
+	display: flex;
+	justify-content: space-between;
+	&__item {
+		display: block;
+		height: 17px;
+		min-width: 17px;
+		position: relative;
+		span {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 10;
+		}
+	}
+	.mail {
+		background: url('./files/images/icons/mail.png') no-repeat;
+		width: 25px;
+		background-size: contain;
+		background-position: center;
+	}
+	.telegram {
+		background: url('./files/images/icons/telegram.png') no-repeat;
+		width: 20px;
+		background-size: contain;
+		background-position: center;
+	}
+	.moon {
+		background: url('./files/images/icons/moon.png') no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+
+}
+
+.brand {
+	background: url('./files/images/mobile.jpg') no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding-bottom: 92%;
+	img {
+		display: block;
+		width: 100%;
+	}
+	img:last-child {
+		display: none;
+	}
+}
+.title {
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 30px;
+	color: #2D2D2D;
+	padding: 0 15px;
+	margin-bottom: 50px;
+}
+.services {
+	padding-top: 50px;
+}
+.service {
+	background: #FAFAFA;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+	margin-bottom: 60px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&__right {
+		padding-bottom: 103%;
+		background-size: cover;
+		background-position: center;
+	}
+
+	&__text {
+		position: fixed;
+		z-index: 100;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+		padding: 24px 15px;
+		overflow: auto;
+		opacity: 0;
+		visibility: hidden;
+		transition: .5s;
+		.close-btn {
+			width: 22px;
+			height: 22px;
+			display: inline-block;
+			background: url('./files/images/icons/plus.png') no-repeat;
+			margin-bottom: 12px;
+		}
+		p {
+			font-size: 14px;
+			line-height: 149%;
+			color: #2D2D2D;
+		}
+	}
+	&__info {
+		padding: 30px 15px;
+	}
+	&__name {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 26px;
+		color: #2D2D2D;
+		margin-bottom: 16px;
+	}
+	&__description {
+		font-size: 14px;
+		line-height: 16px;
+		color: #626262;
+		margin-bottom: 14px;
+	}
+}
+.show {
+	opacity: 1;
+	visibility: visible;
+	z-index: 100;
+}
+.rotate {
+	transform: rotate(45deg);
+}
+.block-1 .service__right {
+	background-image: url('./files/images/block-1.png');
+}
+.block-1 .service__text {
+	background: #5CC560;
+}
+.block-2 .service__text {
+	background: #FFABAB;
+}
+.block-2 .service__right {
+	background-image: url('./files/images/block-2.png');
+}
+.block-3 {
+	.service__right{
+		padding: 0;
+		.grid {
+			display: flex;
+			flex-wrap: wrap;
+			.grid-1, .grid-2, .grid-3, .grid-4 {
+				width: 50%;
+				flex-basis: 50%;
+				padding-bottom: 50%;
+				background-position: center;
+				background-size:cover;
+			}
+			.grid-1 {
+				background-image: url('./files/images/tea.png');
+			}
+			.grid-2 {
+				background-image: url('./files/images/phone.png');
+			}
+			.grid-3 {
+				background-image: url('./files/images/computer.png');
+			}
+			.grid-4 {
+				background-image: url('./files/images/loto.png');
+			}
+		}
+		
+		
+	}
+
+	.service__text {
+		background: #B3EE7A;
+		ul {
+			padding-top: 10px;
+			padding-bottom: 5px;
+			border-bottom: 1px solid #95D358;
+			list-style: none;
+			li {
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 149%;
+				color: #2D2D2D;
+				margin-bottom: 4px;
+			}
+		}
+		ul:last-child {
+			border: none;
+		}
+	}
+}
+.more-btn {
+	display: flex;
+	align-items: center;
+	width: max-content;
+	img {
+		display: block;
+		width: 20px;
+		height: 20px;
+	}
+	&__text{
+		font-size: 14px;
+		color: #626262;
+		padding-left: 6px;
+	}
+}
+
+.reviews {
+	padding: 60px 0;
+	.title {
+		padding-left: 0;
+		margin-bottom: 20px;
+	}
+	&__wrap {
+		position: relative;
+		.prevB, .nextB {
+			width: 26px;
+			height: 26px;
+			z-index: 40;
+			position: absolute;
+			bottom: -50px;
+		}
+		.prevB {
+			background: url('./files/images/icons/prevr.png') no-repeat;
+			background-size: cover;
+			background-position: center;
+			left: calc(50% - 30px);
+		}
+		.nextB {
+			background: url('./files/images/icons/nextr.png') no-repeat;
+			background-size: cover;
+			background-position: center;
+			right: calc(50% - 30px);
+		}
+	}
+}
+.review {
+	position: relative;
+	&::before {
+		content:'';
+		display: block;
+		width: 52px;
+		height: 5px;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		background: url('./files/images/icons/pal.png');
+		background-size: contain;
+	}
+	&::after {
+		content:'';
+		display: block;
+		width: 230px;
+		height: 4px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: #5CC560;
+	}
+	&__video {
+		height: 164px;
+		iframe {
+			height: 100%;
+			width: 100%;
+		}
+	}
+	&__info{
+		display: flex;
+		padding: 25px 0 30px 0;
+	}
+	&__photo {
+		border-radius: 50%;
+		overflow: hidden;
+		width: 50px;
+		height: 50px;
+		margin-right: 12px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+	&__name {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 23px;
+		text-transform: uppercase;
+		color: #2D2D2D;
+	}
+	&__quantity {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 23px;
+		text-transform: uppercase;
+		color: #F85453;
+		margin-right: 15px;
+	}
+	&__subscribe {
+		font-size: 14px;
+		line-height: 16px;
+		color: #626262;
+	}
+}
+
+.feedback {
+	padding-bottom: 30px;
+	padding-top: 80px;
+	.title {
+		padding: 0;
+		position: relative;
+		&::before {
+			content:'';
+			display: block;
+			width: 100px;
+			height: 10px;
+			background: url('./files/images/icons/palG.png');
+			background-size: contain;
+			position: absolute;
+			left: 0;
+			top: -14px;
+		}
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 19px;
+		color: #626262;
+		margin-bottom: 20px;
+		padding-right: 30px;
+	}
+	.form {
+		select {
+			font-size: 14px;
+			line-height: 149%;
+			color: #C4C4C4;
+		}
+		&__input, select {
+			width: 100%;
+			height: 41px;
+			padding: 10px;
+			outline: none;
+			margin-bottom: 12px;
+			border: 1px solid #C4C4C4;
+			border-radius: 4px;
+			background: #E5E5E5;
+		}
+		input::placeholder {
+			font-size: 14px;
+			line-height: 149%;
+			color: #C4C4C4;
+		}
+		&__send {
+			background: #F85453;
+			border-radius: 5px;
+			border: none;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 16px;
+			color: #FFFFFF;
+			height: 41px;
+			width: 100%;
+		}
+		&__privacy {
+			
+			input[type="checkbox"]{
+				display: none;
+			}
+			label {
+				position: relative;
+				display: inline-block;
+				cursor: pointer;
+			}
+			label:before {
+				content: "";
+				display: inline-block;
+				min-width: 14px;
+				width: 14px;
+				height: 14px;
+				border: 1px solid #A6A6A6;
+				border-radius: 1px;
+				position: absolute;
+				left: 0;
+				top: 8px;
+				z-index: 40;
+			}
+			input[type=checkbox]:checked + label:before {
+				background: url('./files/images/icons/check.png') no-repeat;
+				background-position: center;
+			}
+		}
+		&__privacy-text {
+			padding-left: 25px;
+			padding-right: 40px;
+			font-size: 12px;
+			line-height: 13px;
+			color: #9C9C9C;
+			opacity: 0.9;
+		}
+	}
+}
+/* dark mode */
+.dark {
+	background: #1F1F1F;
+	color: #fff;
+	.header {
+		background: #1F1F1F;
+		border-bottom: 1px solid #505050;
+		.header__logo {
+			img:first-child{
+				display: none;
+			}
+			img:last-child {
+				display: block;
+			}
+		}
+		.socials {
+			.mail{
+				background: url('./files/images/icons/mailW.png') no-repeat;
+				background-size: contain;
+				background-position: center;
+			}
+			.telegram {
+				background: url('./files/images/icons/telegramW.png') no-repeat;
+				background-size: contain;
+				background-position: center;
+			}
+			.moon {
+				background: url('./files/images/icons/moonW.png') no-repeat;
+				background-size: contain;
+				background-position: center;
+			}
+		}
+	}
+	.title {color: #fff;}
+	.service {
+		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+		.service__name {
+			color:#fff;
+		}
+		.service__description {
+			color:#fff;
+		}
+		.service__text  {
+			p {color:#fff;}
+			.close-btn {
+				background: url('./files/images/icons/plusW.png');
+			}
+		}
+	}
+	.block-1 {
+		background: #01190E;
+		.service__text {
+			background: #01190E;
+		}
+	}
+	.block-2 {
+		background: #20030C;
+		.service__text {
+			background: #20030C;
+		}
+	}
+	.block-3 {
+		background: #131313;
+		.service__text {
+			ul {
+				border-bottom: 1px solid #565656;
+			}
+			ul li {color: #fff;}
+			background: #131313;
+		}
+	}
+	.more-btn .more-btn__text {color: #fff;}
+	.review .review__name {color: #fff;}
+	.review .review__subscribe {color: #D4D4D4;}
+	.review::before {
+		background: url('./files/images/icons/palW.png');
+		background-size: contain;
+	}
+	.feedback {
+		.feedback__text {
+			color: #BFBFBF;background: #1F1F1F;
+		}
+		.form__input, select {
+			border: 1px solid #5CC560;
+			color: #5CC560;
+			background: #1F1F1F;
+		}
+		.form__input::placeholder {color: #5CC560;}
+		.form__privacy-text {color:#fff;}
+	}
+	.brand {
+		background: url('./files/images/mobileB.png') no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	.block-1 .service__right {
+		background-image: url('./files/images/block-1B.png');
+	}
+	.block-2 .service__right {
+		background-image: url('./files/images/block-2B.png');
+	}
+	.block-3 .service__right {
+		.grid {
+			.grid-1 {
+				background-image: url('./files/images/teaB.png');
+			}
+			.grid-2 {
+				background-image: url('./files/images/phoneB.png');
+			}
+			.grid-3 {
+				background-image: url('./files/images/computerB.png');
+			}
+			.grid-4 {
+				background-image: url('./files/images/lotoB.png');
+			}
+		}
+	}
+}
+
+@import "scss/media";
