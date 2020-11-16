@@ -186,6 +186,21 @@
 					</div>
 				</div>
 			</div>
+			<div class="review">
+				<div class="review__video">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/XE0tWVWEpC8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="review__info">
+					<div class="review__photo"><img src="./files/images/gargonit.jpg" alt=""></div>
+					<div>
+						<h3 class="review__name">GaRgoNiT</h3>
+						<p>
+							<span class="review__quantity">20 267 ТЫС</span>
+							<span class="review__subscribe">Подписчиков</span>
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
@@ -200,19 +215,29 @@
 			заполните форму обратной связи
 		</p>
 		<form action="" class="form">
-			<input type="text" placeholder="Ваше имя" name="name" class="form__input">
-			<input type="tel" placeholder="Номер телефона" name="phone" class="form__input">
-			<input type="email" placeholder="Email" name="email" class="form__input">
-			<select name="" id="" name="select">
-				<option value="">Тип: я стример/рекламодатель</option>
-				<option value="">Тип: я стример/рекламодатель</option>
-				<option value="">Тип: я стример/рекламодатель</option>
-				<option value="">Тип: я стример/рекламодатель</option>
-			</select>
-			<input type="text" placeholder="Доп. инфо" name="other" class="form__input">
+			<div class="form__input">
+				<input type="text" placeholder="Ваше имя" name="name">
+			</div>
+			<div class="form__input">
+				<input type="tel" placeholder="Номер телефона" name="phone" required>
+			</div>
+			<div class="form__input">
+				<input type="email" placeholder="Email" name="email" required>
+			</div>
+			<div class="form__input">
+				<select id="" name="select" required>
+					<option value="">Тип: я стример/рекламодатель</option>
+					<option value="">Тип: я стример/рекламодатель</option>
+					<option value="">Тип: я стример/рекламодатель</option>
+					<option value="">Тип: я стример/рекламодатель</option>
+				</select>
+			</div>
+			<div class="form__input">
+				<input type="text" placeholder="Доп. инфо" name="other" required>
+			</div>
 			<button class="form__send" id="submit">Отправить</button>
 			<div class="form__privacy">
-				<input type="checkbox" id="check" checked />
+				<input type="checkbox" id="check" checked onchange="document.getElementById('submit').disabled = !this.checked;"/>
 				<label for="check"></label>
 				<p class="form__privacy-text">Я соглашаюсь с обработкой моих персональных данных</p>
 			</div>

@@ -78,12 +78,15 @@
 		width: 996px;
 		height: 512px;
 		margin: 0 auto 87px auto;
+		background: #FAFAFA;
+		border: 1px solid #F0F0F0; 
 		&__info {
 			order: 0;
 			width: 50%;
 			padding: 95px 50px 95px 54px;
 			display: flex;
 			flex-direction: column;
+			background: url('../files/images/Vector_1.png') no-repeat;
 		}
 		&__right {
 			order: 1;
@@ -95,6 +98,33 @@
 			font-size: 40px;
 			line-height: 47px;
 			margin-bottom: 20px;
+			position: relative;
+			z-index: 1;
+		}
+		&__name::before {
+			content: '';
+			position: absolute;
+			width: 39px;
+			height: 39px;
+			border-radius: 50%;
+			z-index: -1;
+			top: -14px;
+			left: -14px;
+		}
+		&__name::after {
+			content: '';
+			position: absolute;
+			top: 5px;
+			left: -55px;
+			height: 112px;
+			width: 24px;
+			background: repeating-linear-gradient(
+				to top, 
+				#232323, 
+				#232323 1px, 
+				transparent 2px, 
+				transparent 12px
+				);
 		}
 		&__description {
 			font-size: 16px;
@@ -112,12 +142,21 @@
 			}
 		}
 	}
+	.block-1 .service__name::before {
+		background-color: #5CC560;
+	}
 	.block-2 {
+		.service__name::before {
+			background-color: #FFABAB;;
+		}
 		.service__text {
 			padding: 54px 56px 30px 56px;
 		}
 	}
 	.block-3 {
+		.service__name::before {
+			background-color: #ABEC6C;
+		}
 		.service__right {
 			.grid {
 				.grid-1, .grid-2, .grid-3, .grid-4 {
@@ -177,6 +216,13 @@
 		}
 	}
 	.dark {
+		.service {
+			border: none;
+		}
+		.service__info {
+			background: transparent;
+		}
+		.service__name::before, .service__name::after {display: none;}
 		.block-3 {
 			.service__text ul {
 				border-color: #565656;
@@ -210,20 +256,17 @@
 			padding-left: 0;
 			margin-bottom: 67px;
 		}
-		.container {
-			padding: 0;
-		}
 		&__wrap {
 			.prevB, .nextB {
 				width: 40px;
 				height: 40px;
-				bottom: 50%;
+				bottom: 60%;
 			}
 			.prevB {
-				left: 0;
+				left: -40px;
 			}
 			.nextB {
-				right: 0;
+				right: -20px;
 			}
 			.slick-track {
 				margin: 0 -10px;
@@ -270,6 +313,14 @@
 			line-height: 19px;
 		}
 	}
+	.dark .reviews__wrap {
+		.prevB {
+			background-image: url('./files/images/icons/prevG.png');
+		}
+		.nextB {
+			background-image: url('./files/images/icons/nextG.png');
+		}
+	}
 	.feedback {
 		padding-top: 170px;
 		padding-bottom: 85px;
@@ -292,12 +343,16 @@
 			padding: 59px 145px 59px 64px;
 			background: #fff;
 			box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
-			&__input, select {
+			&__input {
+				display: inline-block;
+				margin-bottom: 30px;
+				margin-right: 32px;
+			}
+			&__input input, select {
 				width: 285px;
 				height: 55px;
 				padding: 16px 14px 15px;
-				margin-bottom: 30px;
-				margin-right: 32px;
+				
 				border-radius: 5px;
 				background: #fff;
 				font-size: 16px;
@@ -312,7 +367,7 @@
 				line-height: 149%;
 				color: #626262;
 			}
-			&__input[name="other"] {
+			&__input input[name="other"] {
 				width: 605px;
 			}
 			&__send {
@@ -320,6 +375,7 @@
 				height: 49px;
 				font-size: 18px;
 				line-height: 21px;
+				display: block;
 			}
 			&__privacy-text {
 				line-height: 25px;
@@ -335,7 +391,7 @@
 					background: #121212;
 					color:#5CC560;
 				}
-				.form__input {
+				.form__input input{
 					background: #121212;
 				}
 			}
@@ -343,3 +399,78 @@
 	}
 }
 
+@media screen and (min-width: 1400px) {
+	.reviews {
+		&__wrap {
+			.prevB {
+				left: -90px;
+			}
+			.nextB {
+				right: -70px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	.services {
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			height: 398px;
+			width: 205px;
+			background: url('./files/images/Vector.png') no-repeat;
+			left: 0;
+			bottom: 100px;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			height: 470px;
+			width: 256px;
+			right: 0;
+			bottom: 560px;
+			background: url('./files/images/Group.png') no-repeat;
+		}
+		.title {
+			position: relative;
+		}
+		.title::before {
+			content: '';
+			position: absolute;
+			height: 231px;
+			right: 0;
+			top: 40px;
+			width: 115px;
+			background: url('./files/images/Group1422.png') no-repeat;
+		}
+		.title::after {
+			content: '';
+			position: absolute;
+			height: 193px;
+			width: 106px;
+			left: 0;
+			top: 570px;
+			background: url('./files/images/Frame.png') no-repeat;
+		}
+	}
+	.reviews{
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			height: 196px;
+			width: 70px;
+			right: 0;
+			top: -55px;
+			background: repeating-linear-gradient(
+				to top, 
+				#ADCE6B, 
+				#ADCE6B 3px, 
+				transparent 4px, 
+				transparent 17px
+			);
+		}
+	}
+}

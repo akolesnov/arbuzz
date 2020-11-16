@@ -366,13 +366,19 @@ body {
 			font-size: 14px;
 			line-height: 149%;
 			color: #C4C4C4;
+			option:checked {
+				color: #F85453;
+			}
 		}
-		&__input, select {
+		&__input {
+			margin-bottom: 12px;
+			position: relative;
+		}
+		&__input input, select {
 			width: 100%;
 			height: 41px;
 			padding: 10px;
 			outline: none;
-			margin-bottom: 12px;
 			border: 1px solid #C4C4C4;
 			border-radius: 4px;
 			background: #E5E5E5;
@@ -398,7 +404,7 @@ body {
 			input[type="checkbox"]{
 				display: none;
 			}
-			label {
+			label[for="check"] {
 				position: relative;
 				display: inline-block;
 				cursor: pointer;
@@ -428,6 +434,18 @@ body {
 			line-height: 13px;
 			color: #9C9C9C;
 			opacity: 0.9;
+		}
+		input.error {
+			border: 1px solid #F85453;
+		}
+		label.error {
+			color: #F85453;
+			font-weight: normal;
+			font-size: 14px;
+			position: absolute;
+			bottom: -20px;
+			left: 0;
+			display: none;
 		}
 	}
 }
@@ -513,12 +531,15 @@ body {
 		.feedback__text {
 			color: #BFBFBF;background: #1F1F1F;
 		}
-		.form__input, select {
+		.form__input input, select {
 			border: 1px solid #5CC560;
 			color: #5CC560;
 			background: #1F1F1F;
 		}
-		.form__input::placeholder {color: #5CC560;}
+		.form__input input::placeholder {color: #5CC560;}
+		input.error {
+			border: 1px solid #F85453;
+		}
 		.form__privacy-text {color:#fff;}
 	}
 	.brand {
