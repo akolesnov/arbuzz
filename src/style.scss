@@ -53,19 +53,19 @@ body {
 		}
 	}
 	.mail {
-		background: url('./files/images/icons/mail.png') no-repeat;
+		background: url('./files/images/icons/mail.svg') no-repeat;
 		width: 25px;
 		background-size: contain;
 		background-position: center;
 	}
 	.telegram {
-		background: url('./files/images/icons/telegram.png') no-repeat;
+		background: url('./files/images/icons/telegram.svg') no-repeat;
 		width: 20px;
 		background-size: contain;
 		background-position: center;
 	}
 	.moon {
-		background: url('./files/images/icons/moon.png') no-repeat;
+		background: url('./files/images/icons/moon.svg') no-repeat;
 		background-position: center;
 		background-size: contain;
 	}
@@ -73,13 +73,17 @@ body {
 }
 
 .brand {
-	background: url('./files/images/mobile.jpg') no-repeat;
+	background: url('./files/images/mobile.png') no-repeat;
 	background-size: cover;
 	background-position: center;
 	padding-bottom: 92%;
+	position: relative;
 	img {
 		display: block;
-		width: 100%;
+		width: 39%;
+		position: absolute;
+		left: 28%;
+		top: 63%;
 	}
 	img:last-child {
 		display: none;
@@ -107,6 +111,7 @@ body {
 		padding-bottom: 103%;
 		background-size: cover;
 		background-position: center;
+		background-repeat: no-repeat;
 	}
 
 	&__text {
@@ -126,7 +131,7 @@ body {
 			width: 22px;
 			height: 22px;
 			display: inline-block;
-			background: url('./files/images/icons/plus.png') no-repeat;
+			background: url('./files/images/icons/plus.svg') no-repeat;
 			margin-bottom: 12px;
 		}
 		p {
@@ -252,15 +257,16 @@ body {
 			z-index: 40;
 			position: absolute;
 			bottom: -50px;
+			cursor: pointer;
 		}
 		.prevB {
-			background: url('./files/images/icons/prevr.png') no-repeat;
+			background: url('./files/images/icons/prevr.svg') no-repeat;
 			background-size: cover;
 			background-position: center;
 			left: calc(50% - 30px);
 		}
 		.nextB {
-			background: url('./files/images/icons/nextr.png') no-repeat;
+			background: url('./files/images/icons/nextr.svg') no-repeat;
 			background-size: cover;
 			background-position: center;
 			right: calc(50% - 30px);
@@ -277,7 +283,7 @@ body {
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		background: url('./files/images/icons/pal.png');
+		background: url('./files/images/icons/pal.svg');
 		background-size: contain;
 	}
 	&::after {
@@ -347,7 +353,7 @@ body {
 			display: block;
 			width: 100px;
 			height: 10px;
-			background: url('./files/images/icons/palG.png');
+			background: url('./files/images/icons/palG.svg');
 			background-size: contain;
 			position: absolute;
 			left: 0;
@@ -366,9 +372,21 @@ body {
 			font-size: 14px;
 			line-height: 149%;
 			color: #C4C4C4;
+			-webkit-appearance: none;
+			position: relative;
 			option:checked {
 				color: #F85453;
 			}
+		&::before {
+			content:'';
+			display: block;
+			width: 9px;
+			height: 5px;
+			background: url('./files/images/icons/gray.svg') no-repeat;
+			background-position: center;
+			position: absolute;
+			right: 18px;
+		}
 		}
 		&__input {
 			margin-bottom: 12px;
@@ -377,7 +395,7 @@ body {
 		&__input input, select {
 			width: 100%;
 			height: 41px;
-			padding: 10px;
+			padding: 0 10px;
 			outline: none;
 			border: 1px solid #C4C4C4;
 			border-radius: 4px;
@@ -466,17 +484,17 @@ body {
 		}
 		.socials {
 			.mail{
-				background: url('./files/images/icons/mailW.png') no-repeat;
+				background: url('./files/images/icons/mailW.svg') no-repeat;
 				background-size: contain;
 				background-position: center;
 			}
 			.telegram {
-				background: url('./files/images/icons/telegramW.png') no-repeat;
+				background: url('./files/images/icons/telegramW.svg') no-repeat;
 				background-size: contain;
 				background-position: center;
 			}
 			.moon {
-				background: url('./files/images/icons/moonW.png') no-repeat;
+				background: url('./files/images/icons/moonW.svg') no-repeat;
 				background-size: contain;
 				background-position: center;
 			}
@@ -494,7 +512,7 @@ body {
 		.service__text  {
 			p {color:#fff;}
 			.close-btn {
-				background: url('./files/images/icons/plusW.png');
+				background: url('./files/images/icons/plusW.svg');
 			}
 		}
 	}
@@ -524,7 +542,7 @@ body {
 	.review .review__name {color: #fff;}
 	.review .review__subscribe {color: #D4D4D4;}
 	.review::before {
-		background: url('./files/images/icons/palW.png');
+		background: url('./files/images/icons/palW.svg');
 		background-size: contain;
 	}
 	.feedback {
@@ -546,6 +564,10 @@ body {
 		background: url('./files/images/mobileB.png') no-repeat;
 		background-size: cover;
 		background-position: center;
+		img:first-child{display: none;}
+		img:last-child {
+			display: block;
+		}
 	}
 	.block-1 .service__right {
 		background-image: url('./files/images/block-1B.png');

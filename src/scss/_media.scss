@@ -48,12 +48,21 @@
 		}
 	}
 	.brand {
-		background-image: url('./files/images/Mask.jpg');
+		background-image: url('./files/images/Mask.png');
 		padding-bottom: 51%;
+		img {
+			width: 25%;
+			position: absolute;
+			left: 36%;
+			top: 58%;
+		}
 	}
 	.dark {
 		.brand {
-			background-image: url('./files/images/MaskB.jpg');
+			background-image: url('./files/images/MaskB.png');
+			img {
+				top: 64%;
+			}
 		}
 	}
 
@@ -79,7 +88,6 @@
 		height: 512px;
 		margin: 0 auto 87px auto;
 		background: #FAFAFA;
-		border: 1px solid #F0F0F0; 
 		&__info {
 			order: 0;
 			width: 50%;
@@ -284,7 +292,7 @@
 
 		}
 		&::after {
-			width: 305px;
+			width: 290px;
 			height: 6px;
 		}
 		&__video {
@@ -315,20 +323,20 @@
 	}
 	.dark .reviews__wrap {
 		.prevB {
-			background-image: url('./files/images/icons/prevG.png');
+			background-image: url('./files/images/icons/prevG.svg');
 		}
 		.nextB {
-			background-image: url('./files/images/icons/nextG.png');
+			background-image: url('./files/images/icons/nextG.svg');
 		}
 	}
 	.feedback {
-		padding-top: 170px;
+		// padding-top: 170px;
 		padding-bottom: 85px;
 		.title {
 			text-align: left;
 			margin-bottom: 36px;
 			&::before {
-				width: 210px;
+				width: 220px;
 				height: 21px;
 				top: -25px;
 			}
@@ -351,7 +359,7 @@
 			&__input input, select {
 				width: 285px;
 				height: 55px;
-				padding: 16px 14px 15px;
+				padding: 0 16px;
 				
 				border-radius: 5px;
 				background: #fff;
