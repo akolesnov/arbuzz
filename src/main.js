@@ -74,5 +74,39 @@ jQuery(function($) {
 
 	$("#phone").mask("+7(999) 999-99-99");
 
+	$(window).scroll(function() {
+		$('.services .title, .reviews .title, .reviews__wrap,.feedback').each(function () {
+			let blockPos = $(this).offset().top;
+
+			let topOfWindow = $(window).scrollTop();
+			if (blockPos < topOfWindow + $(window).innerHeight()) {
+				$(this).addClass("fade");
+			}
+		});
+		$('.block-1, .block-3').each(function () {
+			let blockPos = $(this).offset().top;
+
+			let topOfWindow = $(window).scrollTop();
+			if (blockPos < topOfWindow + $(window).innerHeight()) {
+				$(this).addClass("fadeInRight")
+			}
+		});
+		$('.block-2').each(function () {
+			let blockPos = $(this).offset().top;
+
+			let topOfWindow = $(window).scrollTop();
+			if (blockPos < topOfWindow + $(window).innerHeight()) {
+				$(this).addClass("fadeInLeft")
+			}
+		});
+	});
+
+	$('.form').on('submit', function (e) {
+		$('.overlay, .modal').fadeIn();
+	});
+	$('.overlay, .close-btn').on('click', function (e) {
+		$('.overlay, .modal').fadeOut();
+	});
 
 });
+

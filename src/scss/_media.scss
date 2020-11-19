@@ -405,6 +405,45 @@
 			}
 		}
 	}
+	.fadeInRight {
+		animation: fadeInRight ease 2s;
+	}
+	.fadeInLeft {
+		animation: fadeInLeft ease 2s;
+	}
+	.fade {
+		animation: fadeIn ease 2s;
+	}
+
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	@keyframes fadeInRight {
+		0% {
+			opacity: 0;
+			transform: translateX(300px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+	@keyframes fadeInLeft {
+		0% {
+			opacity: 0;
+			transform: translateX(-300px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
 }
 
 @media screen and (min-width: 1400px) {
