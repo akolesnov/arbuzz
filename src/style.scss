@@ -1,7 +1,7 @@
 @import "scss/settings";
 
 body {
-	padding-top: 48px;
+	padding-top: 52px;
 }
 .container {
 	margin: 0 auto;
@@ -9,7 +9,8 @@ body {
 	padding: 0 15px;
 }
 .header{
-	background: #FAFAFA;
+	// background: #FAFAFA;
+	background: rgba(250, 250, 250, .72);
 	width: 100%;
 	position: fixed;
 	left: 0;
@@ -20,10 +21,10 @@ body {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 48px;
+		height: 52px;
 	}
 	&__logo {
-		height: 16px;
+		height: 24px;
 		display: block;
 		img {
 			height: 100%;
@@ -43,14 +44,6 @@ body {
 		height: 17px;
 		min-width: 17px;
 		position: relative;
-		span {
-			opacity: 0;
-			visibility: hidden;
-			position: absolute;
-			top: 0;
-			right: 0;
-			z-index: 10;
-		}
 	}
 	.mail {
 		background: url('./files/images/icons/mail.svg') no-repeat;
@@ -73,11 +66,13 @@ body {
 }
 
 .brand {
-	background: url('./files/images/mobile.png') no-repeat;
+	background: url('./files/images/Mask.svg') no-repeat;
 	background-size: cover;
 	background-position: center;
 	padding-bottom: 92%;
 	position: relative;
+	max-width: 1920px;
+	margin: 0 auto;
 	img {
 		display: block;
 		width: 39%;
@@ -122,22 +117,37 @@ body {
 		top: 0;
 		bottom: 0;
 		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
-		padding: 24px 15px;
+		padding: 120px 0;
 		overflow: auto;
+		webkit-overflow-scrolling: touch;
 		opacity: 0;
 		visibility: hidden;
 		transition: .5s;
 		.close-btn {
-			width: 22px;
-			height: 22px;
+			width: 30px;
+			height: 30px;
 			display: inline-block;
-			background: url('./files/images/icons/plus.svg') no-repeat;
+			background-size: cover;
+			background-image: url('./files/images/icons/plus.svg');
 			margin-bottom: 12px;
+			position: absolute;
+			left: 10%;
+			top: 60px;
+		}
+		h3 {
+			font-size: 30px;
+			line-height: 36px;
+			font-weight: bold;
+			color: #2D2D2D;
+			width: 80%;
+			margin: 0 auto 20px auto;
 		}
 		p {
-			font-size: 14px;
+			font-size: 16px;
 			line-height: 149%;
 			color: #2D2D2D;
+			width: 80%;
+			margin: 0 auto;
 		}
 	}
 	&__info {
@@ -166,7 +176,8 @@ body {
 	transform: rotate(45deg);
 }
 .block-1 .service__right {
-	background-image: url('./files/images/block-1.png');
+	// background-image: url('./files/images/block-1.png');
+	background-image: url('./files/images/block-1.svg');
 }
 .block-1 .service__text {
 	background: #5CC560;
@@ -175,7 +186,8 @@ body {
 	background: #FFABAB;
 }
 .block-2 .service__right {
-	background-image: url('./files/images/block-2.png');
+	// background-image: url('./files/images/block-2.png');
+	background-image: url('./files/images/block-2.svg');
 }
 .block-3 {
 	.service__right{
@@ -220,6 +232,8 @@ body {
 				line-height: 149%;
 				color: #2D2D2D;
 				margin-bottom: 4px;
+				width: 80%;
+				margin: 0 auto;
 			}
 		}
 		ul:last-child {
@@ -275,10 +289,12 @@ body {
 }
 .review {
 	position: relative;
+	margin: 0 10px;
 	&::before {
 		content:'';
 		display: block;
-		width: 52px;
+		// width: 52px;
+		width: 20%;
 		height: 5px;
 		position: absolute;
 		bottom: 0;
@@ -289,7 +305,8 @@ body {
 	&::after {
 		content:'';
 		display: block;
-		width: 230px;
+		// width: 230px;
+		width: 75%;
 		height: 4px;
 		position: absolute;
 		bottom: 0;
@@ -297,8 +314,13 @@ body {
 		background: #5CC560;
 	}
 	&__video {
-		height: 164px;
+		// height: 164px;
+		padding-bottom: 61%;
+		position: relative;
 		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
 			height: 100%;
 			width: 100%;
 		}
@@ -364,9 +386,63 @@ body {
 		font-size: 16px;
 		line-height: 19px;
 		color: #626262;
-		margin-bottom: 20px;
+		margin-bottom: 50px;
 		padding-right: 30px;
 	}
+	&__line {
+		height: 316px;
+		overflow: hidden;
+		display: flex;
+		justify-content: space-around;
+		svg:first-child {
+			max-height: 366px;
+		}
+		svg:last-child {
+			max-height: 404px;
+		}
+	}
+	&__switch {
+		position: relative;
+		display: inline-block;
+		width: 87px;
+		height: 49px;
+		align-self: center;
+		.slider {
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: #67B762;
+			border-radius: 63px;
+			-webkit-transition: .4s;
+			transition: .4s;
+			webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+		.slider::before {
+			position: absolute;
+			content: "";
+			-webkit-transition: .4s;
+			transition: .4s;
+			width: 47px;
+			height: 47px;
+			border-radius: 50%;
+			background: #FFFFFF;
+			border: 1px solid #F4F4F4;
+			left: 1px;
+			bottom: 1px;
+		}
+		input {
+			display: none;
+		}
+		input:checked + .slider:before {
+			-webkit-transform: translateX(35px);
+			-ms-transform: translateX(35px);
+			transform: translateX(35px);
+		}
+	}
+
 	.form {
 		select {
 			font-size: 14px;
@@ -392,7 +468,7 @@ body {
 			margin-bottom: 12px;
 			position: relative;
 		}
-		&__input input, select {
+		&__input input {
 			width: 100%;
 			height: 41px;
 			padding: 0 10px;
@@ -463,16 +539,18 @@ body {
 			position: absolute;
 			bottom: -20px;
 			left: 0;
-			display: none;
+			display: none !important;
 		}
 	}
 }
+
 /* dark mode */
 .dark {
 	background: #1F1F1F;
 	color: #fff;
 	.header {
-		background: #1F1F1F;
+		// background: #1F1F1F;
+		background: rgba(31, 31, 31, .72);
 		border-bottom: 1px solid #505050;
 		.header__logo {
 			img:first-child{
@@ -506,13 +584,16 @@ body {
 		.service__name {
 			color:#fff;
 		}
+		.service__right {
+			background-color: #170803;
+		}
 		.service__description {
 			color:#fff;
 		}
-		.service__text  {
-			p {color:#fff;}
+		.service__text {
+			p, h3 {color:#fff;}
 			.close-btn {
-				background: url('./files/images/icons/plusW.svg');
+				background-image: url('./files/images/icons/plusW.svg');
 			}
 		}
 	}
@@ -549,8 +630,8 @@ body {
 		.feedback__text {
 			color: #BFBFBF;background: #1F1F1F;
 		}
-		.form__input input, select {
-			border: 1px solid #5CC560;
+		.form__input input {
+			// border: 1px solid #5CC560;
 			color: #5CC560;
 			background: #1F1F1F;
 		}
@@ -561,19 +642,13 @@ body {
 		.form__privacy-text {color:#fff;}
 	}
 	.brand {
-		background: url('./files/images/mobileB.png') no-repeat;
+		background: url('./files/images/MaskB.svg') no-repeat;
 		background-size: cover;
 		background-position: center;
 		img:first-child{display: none;}
 		img:last-child {
 			display: block;
 		}
-	}
-	.block-1 .service__right {
-		background-image: url('./files/images/block-1B.png');
-	}
-	.block-2 .service__right {
-		background-image: url('./files/images/block-2B.png');
 	}
 	.block-3 .service__right {
 		.grid {
@@ -590,6 +665,9 @@ body {
 				background-image: url('./files/images/lotoB.png');
 			}
 		}
+	}
+	.w_b {
+		fill: #ffffff;
 	}
 }
 .overlay{
@@ -619,11 +697,11 @@ body {
 	font-weight: 500;
 	color: #1F1F1F;
 }
-.close-btn {
+.close-btnn {
 	position: absolute;
 	font-size: 20px;
 	top: 10px;
-	right: 10px;
+	left: 10px;
 	cursor: pointer;
 	font-weight: 500;
 	z-index: 1002;

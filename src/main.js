@@ -41,7 +41,7 @@ jQuery(function($) {
 				}
 			},
 			{
-				breakpoint: 480,
+				breakpoint: 520,
 				settings: {
 					slidesToShow: 1,
 				}
@@ -61,10 +61,10 @@ jQuery(function($) {
 					required: "Поле обязательно к заполнению",
 					email: "Необходим формат адреса email" 
 				},
-				select: {
+				company: {
 					required: "Поле обязательно к заполнению",
 				},
-				other: {
+				name: {
 					required: "Поле обязательно к заполнению",
 				},
 			}
@@ -101,12 +101,12 @@ jQuery(function($) {
 		});
 	});
 
-	$('.form').on('submit', function (e) {
-		$('.overlay, .modal').fadeIn();
-	});
-	$('.overlay, .close-btn').on('click', function (e) {
-		$('.overlay, .modal').fadeOut();
-	});
+	// $('.form').on('submit', function (e) {
+	// 	$('.overlay, .modal').fadeIn();
+	// });
+	// $('.overlay, .close-btn').on('click', function (e) {
+	// 	$('.overlay, .modal').fadeOut();
+	// });
 
 });
 
