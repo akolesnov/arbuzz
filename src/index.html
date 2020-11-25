@@ -150,7 +150,7 @@
 					<div>
 						<h3 class="review__name">Railcat</h3>
 						<p>
-							<span class="review__quantity">20 267 ТЫС</span>
+							<span class="review__quantity">7.3 ТЫС</span>
 							<span class="review__subscribe">Подписчиков</span>
 						</p>
 					</div>
@@ -165,7 +165,7 @@
 					<div>
 						<h3 class="review__name">ksun41k</h3>
 						<p>
-							<span class="review__quantity">33 571 ТЫС</span>
+							<span class="review__quantity">34.6 ТЫС</span>
 							<span class="review__subscribe">Подписчиков</span>
 						</p>
 					</div>
@@ -180,7 +180,7 @@
 					<div>
 						<h3 class="review__name">zybbr</h3>
 						<p>
-							<span class="review__quantity">4,33 тыс</span>
+							<span class="review__quantity">45.2 тыс</span>
 							<span class="review__subscribe">Подписчиков</span>
 						</p>
 					</div>
@@ -195,7 +195,7 @@
 					<div>
 						<h3 class="review__name">GaRgoNiT</h3>
 						<p>
-							<span class="review__quantity">20 267 ТЫС</span>
+							<span class="review__quantity">20.2 ТЫС</span>
 							<span class="review__subscribe">Подписчиков</span>
 						</p>
 					</div>
@@ -264,8 +264,8 @@
 				<path d="M197.233 274.503C187.834 274.503 167.366 267.667 162.971 261.482L161.954 260.058L193.937 190.354C194.277 189.614 194.897 189.04 195.66 188.758C196.423 188.476 197.267 188.508 198.006 188.848C198.746 189.188 199.32 189.808 199.602 190.571C199.884 191.334 199.852 192.178 199.512 192.917L169.075 259.081C174.772 263.638 194.344 269.579 198.454 268.318C198.839 268.2 199.243 268.16 199.643 268.198C200.044 268.237 200.433 268.354 200.788 268.543C201.143 268.732 201.458 268.989 201.713 269.299C201.969 269.61 202.162 269.968 202.279 270.352C202.397 270.737 202.437 271.141 202.399 271.542C202.36 271.942 202.243 272.331 202.054 272.686C201.865 273.041 201.608 273.356 201.298 273.612C200.987 273.868 200.629 274.06 200.245 274.177C199.258 274.41 198.247 274.52 197.233 274.503Z" fill="#010101" class="w_b"/>
 				<path d="M157.562 305.672C157.198 305.729 156.827 305.729 156.463 305.672C156.074 305.528 155.718 305.307 155.416 305.023C155.114 304.738 154.872 304.396 154.705 304.017C154.538 303.637 154.449 303.228 154.444 302.813C154.438 302.398 154.516 301.987 154.673 301.603C156.925 295.656 159.731 289.934 163.055 284.512C164.764 281.582 166.514 278.571 168.589 274.462C168.962 273.755 169.597 273.223 170.358 272.98C171.119 272.736 171.944 272.801 172.658 273.159C173.015 273.337 173.334 273.583 173.595 273.884C173.856 274.185 174.055 274.535 174.18 274.913C174.305 275.292 174.353 275.691 174.322 276.089C174.292 276.486 174.183 276.874 174.001 277.229C171.804 281.298 169.932 284.716 168.304 287.564C165.071 292.713 162.346 298.165 160.166 303.841C159.942 304.356 159.581 304.8 159.122 305.123C158.662 305.446 158.122 305.636 157.562 305.672Z" fill="#010101" class="w_b"/>
 			</svg>
-			<label class="feedback__switch">
-				<input type="checkbox">
+			<label class="feedback__switch" for="switch">
+				<input type="checkbox" checked id="switch">
 				<span class="slider"></span>
 			</label>
 			<svg width="276" height="489" viewBox="0 0 276 489" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -309,6 +309,7 @@
 
 
 		<form action="" class="form">
+			<input type="hidden" name="tip" value="Рекламодатель">
 			<div class="form__input">
 				<input type="text" placeholder="Ваше имя" name="name" required>
 			</div>
@@ -326,9 +327,7 @@
 			</div>
 			<button class="form__send" id="submit">Отправить</button>
 			<div class="form__privacy">
-				<input type="checkbox" id="check" checked onchange="document.getElementById('submit').disabled = !this.checked;"/>
-				<label for="check"></label>
-				<p class="form__privacy-text">Я соглашаюсь с обработкой моих персональных данных</p>
+				<p class="form__privacy-text">Отправляя свои данные вы соглашаетесь на обработку персональных данных в соответствии с действующим законодательством</p>
 			</div>
 	</form>
 	</div>
