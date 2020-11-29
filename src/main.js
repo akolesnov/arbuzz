@@ -131,7 +131,6 @@ jQuery(function($) {
 				processData: false
 			});
 		}
-		
 	});
 
 	// отправка формы END
@@ -187,3 +186,43 @@ jQuery(function($) {
 
 });
 
+// youtube api 
+
+let players = [];
+function onYouTubeIframeAPIReady() {
+	players[0] = new YT.Player('player', {
+		videoId: 'OSn8h0uhNuA',
+		events: {
+			'onStateChange': onPlayerStateChange
+		}
+	});
+	players[1] = new YT.Player('player1', {
+		videoId: 'm1mnPN8KTo0',
+		events: {
+			'onStateChange': onPlayerStateChange
+		}
+	});
+	players[2] = new YT.Player('player2', {
+		videoId: 'cAxeMzIyjII',
+		events: {
+			'onStateChange': onPlayerStateChange
+		}
+	});
+	players[3] = new YT.Player('player3', {
+		videoId: 'XE0tWVWEpC8',
+		events: {
+			'onStateChange': onPlayerStateChange
+		}
+	});
+}
+
+function onPlayerStateChange(event) {
+
+	let link = event.target.f.id;
+	let newstate = event.data;
+	if (newstate == YT.PlayerState.PLAYING) {
+		players.forEach(function(item, i) {
+			if (item.f.id != link) item.pauseVideo();
+		});
+	}
+}
