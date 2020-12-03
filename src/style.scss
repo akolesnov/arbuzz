@@ -75,10 +75,10 @@ body {
 	margin: 0 auto;
 	img {
 		display: block;
-		width: 39%;
+		width: 38%;
 		position: absolute;
 		left: 28%;
-		top: 63%;
+		top: 62%;
 	}
 	img:last-child {
 		display: none;
@@ -203,16 +203,16 @@ body {
 				background-size:cover;
 			}
 			.grid-1 {
-				background-image: url('./files/images/tea.png');
+				background-image: url('./files/images/tea.svg');
 			}
 			.grid-2 {
-				background-image: url('./files/images/phone.png');
+				background-image: url('./files/images/phone.svg');
 			}
 			.grid-3 {
-				background-image: url('./files/images/computer.png');
+				background-image: url('./files/images/computer.svg');
 			}
 			.grid-4 {
-				background-image: url('./files/images/loto.png');
+				background-image: url('./files/images/loto.svg');
 			}
 		}
 		
@@ -274,13 +274,13 @@ body {
 			cursor: pointer;
 		}
 		.prevB {
-			background: url('./files/images/icons/prevr.svg') no-repeat;
+			background: url('./files/images/icons/prevR.svg') no-repeat;
 			background-size: cover;
 			background-position: center;
 			left: calc(50% - 30px);
 		}
 		.nextB {
-			background: url('./files/images/icons/nextr.svg') no-repeat;
+			background: url('./files/images/icons/nextR.svg') no-repeat;
 			background-size: cover;
 			background-position: center;
 			right: calc(50% - 30px);
@@ -401,6 +401,18 @@ body {
 		}
 		svg:last-child {
 			max-height: 180px
+		}
+	}
+	&__names {
+		display: flex;
+		justify-content: space-around;
+		p {
+			color: #2D2D2D;
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
+		p:firs-child {
+			padding-left: 30px;
 		}
 	}
 	&__switch {
@@ -617,6 +629,9 @@ body {
 		.feedback__text {
 			color: #BFBFBF;background: #1F1F1F;
 		}
+		.feedback__names p {
+			color: #fff;
+		}
 		.form__input input {
 			// border: 1px solid #5CC560;
 			color: #5CC560;
@@ -640,16 +655,16 @@ body {
 	.block-3 .service__right {
 		.grid {
 			.grid-1 {
-				background-image: url('./files/images/teaB.png');
+				background-image: url('./files/images/teaB.svg');
 			}
 			.grid-2 {
-				background-image: url('./files/images/phoneB.png');
+				background-image: url('./files/images/phoneB.svg');
 			}
 			.grid-3 {
-				background-image: url('./files/images/computerB.png');
+				background-image: url('./files/images/computerB.svg');
 			}
 			.grid-4 {
-				background-image: url('./files/images/lotoB.png');
+				background-image: url('./files/images/lotoB.svg');
 			}
 		}
 	}
@@ -692,6 +707,9 @@ body {
 	cursor: pointer;
 	font-weight: 500;
 	z-index: 1002;
+}
+.blured {
+	opacity: .3;
 }
 
 @import "scss/media";

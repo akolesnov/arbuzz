@@ -172,9 +172,13 @@ jQuery(function($) {
 		if($('#switch').is(':checked')){
 			$('input[name="company"]').attr("placeholder", "Компания");
 			$('input[name="tip"]').attr("value", "Рекламодатель");
+			$('.strimer').addClass("blured");
+			$('.rdatel').removeClass("blured");
 		}else {
 			$('input[name="company"]').attr("placeholder", "Ссылка на Twitch канал");
 			$('input[name="tip"]').attr("value", "Стример");
+			$('.strimer').removeClass("blured");
+			$('.rdatel').addClass("blured");
 		}
 	});
 
@@ -183,6 +187,7 @@ jQuery(function($) {
 	$('.overlay, .close-btnn').on('click', function (e) {
 		$('.overlay, .modal').fadeOut();
 	});
+
 
 });
 
